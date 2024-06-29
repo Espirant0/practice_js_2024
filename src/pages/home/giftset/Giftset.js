@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimatedSection from "../../../widgets/animatedSection/AnimatedSection";
+import AnimatedSection from "../../../shared/animatedSection/AnimatedSection";
 import GiftsetList from "./GiftsetList";
 
 const Giftset = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import FeatureList from "./FeatureList";
-import AnimatedSection from "../../../widgets/animatedSection/AnimatedSection";
+import AnimatedSection from "../../../shared/animatedSection/AnimatedSection";
 
 const Features = () => {
 	return (

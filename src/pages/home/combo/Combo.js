@@ -1,6 +1,6 @@
 import React from 'react';
 import ComboList from "./ComboList";
-import AnimatedSection from "../../../widgets/animatedSection/AnimatedSection";
+import AnimatedSection from "../../../shared/animatedSection/AnimatedSection";
 
 const Combo = () => {
 	return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import InfiniteSlider from "../../../widgets/infiniteSlider/InfiniteSlider";
+import InfiniteSlider from "../../../shared/infiniteSlider/InfiniteSlider";
 
 const comboList = [
 	{

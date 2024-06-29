@@ -1,13 +1,13 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './styles/styles.css';
+import '../styles/styles.css';
 
-import Home from './pages/home/Home';
-import Confidential from './pages/confidential/Confidential';
-import NotFound from './pages/notfound/NotFound';
-import Order from './pages/order/Order';
-import OrderSuccess from './pages/ordersuccess/OrderSuccess';
+import Home from '../pages/home/Home';
+import Confidential from '../pages/confidential/Confidential';
+import NotFound from '../pages/notfound/NotFound';
+import Order from '../pages/order/Order';
+import OrderSuccess from '../pages/ordersuccess/OrderSuccess';
 
 
 const App = () => {

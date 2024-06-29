@@ -1,6 +1,6 @@
 import React from 'react';
 import CoffeeList from "./CoffeeList";
-import AnimatedSection from "../../../widgets/animatedSection/AnimatedSection";
+import AnimatedSection from "../../../shared/animatedSection/AnimatedSection";
 
 const Coffee = () => {
 	return (
