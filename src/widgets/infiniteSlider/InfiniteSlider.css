@@ -1,0 +1,12 @@
+.slick-list {
+	max-height: 630px;
+}
+
+.slick-prev {
+	display: none !important;
+}
+
+.slick-next:hover, .slick-next:hover::after, .slick-next::before, .slick-next {
+	background: var(--clr-accent) !important;
+	opacity: 1 !important;
+}
