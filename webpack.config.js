@@ -3,33 +3,33 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.js', // Входной файл вашего приложения
+	entry: './src/app/index.js',
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist'), // Папка для выходных файлов
-		publicPath: '/', // Для корректной работы роутинга
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: '/',
 	},
 	module: {
 		rules: [
 			{
-				test: /\.js$/, // Для обработки JavaScript и JSX файлов
+				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
 				},
 			},
 			{
-				test: /\.css$/, // Для обработки CSS файлов
+				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
 			},
 			{
-				test: /\.(woff|woff2|eot|ttf|otf)$/, // Для обработки шрифтов
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
 							name: '[name].[hash].[ext]',
-							outputPath: 'fonts/', // Папка для шрифтов в выходной директории
+							outputPath: 'fonts/',
 						},
 					},
 				],
@@ -69,13 +69,13 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(mp4|webm|ogg)$/, // Для обработки видеофайлов
+				test: /\.(mp4|webm|ogg)$/,
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
 							name: '[name].[hash].[ext]',
-							outputPath: 'videos/', // Папка для видеофайлов в выходной директории
+							outputPath: 'videos/',
 						},
 					},
 				],
@@ -84,26 +84,26 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/index.html', // Ваш HTML шаблон
+			template: './src/app/index.html',
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
 				{from: 'src/styles', to: 'styles'},
-				{from: 'src/images', to: 'images'}, // Копирование изображений в выходную директорию
-				{from: 'src/videos', to: 'videos'}, // Копирование видеофайлов в выходную директорию
+				{from: 'src/assets/images', to: 'images'},
+				{from: 'src/assets/videos', to: 'videos'},
 			],
 		}),
 	],
 	devServer: {
-		historyApiFallback: true, // Для корректной работы роутинга с React Router
+		historyApiFallback: true,
 		static: {
-			directory: path.join(__dirname, 'src'), // Убедитесь, что сервер обслуживает статические файлы из правильной директории
+			directory: path.join(__dirname, 'src/assets'),
 		},
-		open: true, // Автоматически открывать браузер
+		open: true,
 		client: {
 			overlay: false
 		},
 	},
-	mode: 'development', // Режим сборки
+	mode: 'development',
 
 };
