@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './DoubleSlider.css';
-import CoffeeCard from "../../pages/home/coffee/CoffeeCard";
+import CoffeeCard from "../../widgets/coffee/CoffeeCard";
 
 const DoubleSlider = ({slides}) => {
 	const settings = {

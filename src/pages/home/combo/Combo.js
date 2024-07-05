@@ -1,5 +1,5 @@
 import React from 'react';
-import ComboList from "./ComboList";
+import ComboList from "../../../widgets/combo/ComboList";
 import AnimatedSection from "../../../shared/animatedSection/AnimatedSection";
 
 const Combo = () => {

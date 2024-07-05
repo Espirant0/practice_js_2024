@@ -1,4 +1,5 @@
 const path = require('path');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -88,9 +89,10 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
-				{from: 'src/styles', to: 'styles'},
+				{from: 'src/app/styles', to: 'styles'},
 				{from: 'src/assets/images', to: 'images'},
 				{from: 'src/assets/videos', to: 'videos'},
+				{from: 'src/assets/fonts', to: 'fonts'},
 			],
 		}),
 	],
@@ -101,7 +103,7 @@ module.exports = {
 		},
 		open: true,
 		client: {
-			overlay: false
+			overlay: false,
 		},
 	},
 	mode: 'development',

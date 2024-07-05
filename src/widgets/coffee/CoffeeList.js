@@ -1,5 +1,5 @@
 import React from 'react';
-import DoubleSlider from "../../../shared/doubleSlider/DoubleSlider";
+import DoubleSlider from "../../shared/doubleSlider/DoubleSlider";
 
 const coffeeList = [
 	{

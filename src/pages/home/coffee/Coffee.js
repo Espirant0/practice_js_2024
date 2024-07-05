@@ -1,5 +1,5 @@
 import React from 'react';
-import CoffeeList from "./CoffeeList";
+import CoffeeList from "../../../widgets/coffee/CoffeeList";
 import AnimatedSection from "../../../shared/animatedSection/AnimatedSection";
 
 const Coffee = () => {
